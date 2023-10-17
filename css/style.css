@@ -15,23 +15,12 @@ Variables
 :root {
   --bg-main: #0084fd;
   --bg-debug: #b5ddff;
-}
-
-/*
-Debug
-*/
-
-.debug main .col {
-  height: 100px;
+  --bg-section: #9792e4;
 }
 
 /*
 Common
 */
-
-body {
-  background-color: pink;
-}
 
 .container {
   padding: 0 1.875rem;
@@ -42,12 +31,21 @@ body {
   display: flex;
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .justify-between {
   justify-content: space-between;
 }
 
 section {
   padding: 3.125rem 0;
+}
+
+section.bg-section {
+  background-color: var(--bg-section);
 }
 
 /*
@@ -68,24 +66,20 @@ header {
 Main
 */
 
-#jumbo .col {
+.col {
   margin-bottom: 1.5625rem;
   padding: 0 0.9375rem;
 }
 
-#jumbo .content {
+.content {
   background-color: var(--bg-debug);
   height: 100%;
   padding: 1.25rem;
 }
 
-#jumbo .row {
+.row {
   margin: 0 -0.9375rem;
 }
-
-/*
-Footer
-*/
 
 /*
 Responsive
@@ -94,19 +88,14 @@ Responsive
 /* da 768px in su */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 740px;
   }
 
-  #jumbo .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  #jumbo .col {
+  .col {
     width: calc(100% / 3);
   }
 
-  #jumbo .col.main-col {
+  .col.main-col {
     width: calc((100% / 3) * 2);
   }
 }
@@ -115,11 +104,30 @@ Responsive
   .container {
     max-width: 960px;
   }
+
+  /* planning */
+
+  #planning .columns {
+    display: flex;
+  }
 }
 
 /* da 992px in su */
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+
+  /* planning */
+
+  #planning .col {
+    padding: 0 130px 0 125px;
+    width: calc(50% - 4rem);
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  #planning .columns {
+    max-width: 940px;
   }
 }
