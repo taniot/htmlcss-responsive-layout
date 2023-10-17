@@ -14,7 +14,15 @@ Variables
 
 :root {
   --bg-main: #0084fd;
-  --bg-debug: yellow;
+  --bg-debug: #b5ddff;
+}
+
+/*
+Debug
+*/
+
+.debug main .col {
+  height: 100px;
 }
 
 /*
@@ -27,6 +35,7 @@ body {
 
 .container {
   padding: 0 1.875rem;
+  margin: 0 auto;
 }
 
 .flex {
@@ -35,6 +44,10 @@ body {
 
 .justify-between {
   justify-content: space-between;
+}
+
+section {
+  padding: 3.125rem 0;
 }
 
 /*
@@ -55,6 +68,58 @@ header {
 Main
 */
 
+#jumbo .col {
+  margin-bottom: 1.5625rem;
+  padding: 0 0.9375rem;
+}
+
+#jumbo .content {
+  background-color: var(--bg-debug);
+  height: 100%;
+  padding: 1.25rem;
+}
+
+#jumbo .row {
+  margin: 0 -0.9375rem;
+}
+
 /*
 Footer
 */
+
+/*
+Responsive
+*/
+
+/* da 768px in su */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  #jumbo .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #jumbo .col {
+    width: calc(100% / 3);
+  }
+
+  #jumbo .col.main-col {
+    width: calc((100% / 3) * 2);
+  }
+}
+/* da 992px in su */
+@media screen and (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* da 992px in su */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
