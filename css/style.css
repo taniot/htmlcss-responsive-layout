@@ -1,0 +1,60 @@
+/*
+Reset
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+Variables
+*/
+
+:root {
+  --bg-main: #0084fd;
+  --bg-debug: yellow;
+}
+
+/*
+Common
+*/
+
+body {
+  background-color: pink;
+}
+
+.container {
+  padding: 0 1.875rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/*
+Header
+*/
+
+header {
+  background-color: var(--bg-main);
+}
+
+.logo,
+.menu {
+  background-color: var(--bg-debug);
+  padding: 1.25rem;
+}
+
+/*
+Main
+*/
+
+/*
+Footer
+*/
